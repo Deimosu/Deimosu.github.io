@@ -10,7 +10,7 @@
 /* ======= Base ======= */
 body {
   font-family: 'Open Sans', arial, sans-serif;
-  color: #494d55;
+  color: #fff;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -408,8 +408,8 @@ select {
 }
 /* ======= Doc Styling ======= */
 .doc-wrapper {
+  background-color: #32363b;
   padding: 45px 0;
-  background: #f9f9fb;
 }
 .doc-body {
   position: relative;
@@ -488,7 +488,7 @@ select {
 .section-block {
   padding-top: 18px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 2px solid #f55;
 }
 .section-block .block-title {
   margin-top: 10px;
@@ -504,6 +504,7 @@ select {
   padding-bottom: 15px;
 }
 .section-block-h4 .block-title {
+  text-decoration: underline;
   margin-top: 10px;
 }
 .section-block-h4 .list > li {
@@ -626,6 +627,9 @@ select {
 .body-orange .table > thead > tr > th {
   border-bottom-color: #fbc393;
 }
+.body-red .table > thead > tr > th {
+  border-bottom-color: #eda9a1;
+}
 .body-pink .table > thead > tr > th {
   border-bottom-color: #f5aecd;
 }
@@ -636,7 +640,7 @@ select {
   border-bottom-color: inherit;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f5f5f5;
+  background-color: #32363b;
 }
 .screenshot-holder {
   margin-top: 15px;
@@ -827,7 +831,7 @@ select {
   display: block;
   padding: 5px 15px;
   border-left: 4px solid transparent;
-  color: #616670;
+  color: #fff;
 }
 .doc-menu > li > a:hover,
 .doc-menu > li > a:focus {
@@ -902,7 +906,7 @@ select {
 }
 .doc-sub-menu > li > a {
   display: block;
-  color: #616670;
+  color: #fff;
   padding: 0;
   padding-left: 34px;
   background: none;
@@ -955,7 +959,6 @@ select {
 .body-purple .doc-sub-menu > li.active > a {
   color: #8A40A7;
 }
-
 .doc-sub-sub-menu {
   list-style: none;
   padding-left: 0;
@@ -969,7 +972,7 @@ select {
 }
 .doc-sub-sub-menu > li > a {
   display: block;
-  color: #616670;
+  color: #fff;
   padding: 0;
   padding-left: 50px;
   background: none;
@@ -991,7 +994,6 @@ select {
 .body-red .doc-sub-sub-menu > li.active > a {
   color: #f77b6b;
 }
-
 .doc-sub-sub-sub-menu {
   list-style: none;
   padding-left: 0;
@@ -1005,7 +1007,7 @@ select {
 }
 .doc-sub-sub-sub-menu > li > a {
   display: block;
-  color: #616670;
+  color: #fff;
   padding: 0;
   padding-left: 66px;
   background: none;
@@ -1366,3 +1368,11 @@ select {
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
+.zoom {
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
