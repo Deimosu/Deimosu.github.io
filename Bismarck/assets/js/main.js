@@ -7,7 +7,6 @@ $(document).ready(function() {
 	$('#doc-menu').affix({
         offset: {
             top: ($('#header').outerHeight(true) + $('#doc-header').outerHeight(true)) + 45,
-            bottom: ($('#footer').outerHeight(true) + $('#promo-block').outerHeight(true)) + 75
         }
     });
     
