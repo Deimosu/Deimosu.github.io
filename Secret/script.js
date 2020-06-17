@@ -258,7 +258,7 @@ class gameMechanics {
 class gameSettings {
 	constructor() {
 		this.players = 4;
-		this.pairs = 8;
+		this.pairs = 16;
 		this.color = "red";
 		this.lock = false;
 		this.mechanic = null;
@@ -289,13 +289,15 @@ class gameSettings {
 		this.createField();
 	}
 
-	changeSize(new_div, new_pairs) {
+	changeSize(new_div, x) {
 		if (this.lock) return;
-		let old_div = document.getElementsByClassName("spalte-buttonSizePair fontSize button size active")[0];
-		old_div.setAttribute("class", "spalte-buttonSizePair fontSize button size");
 
-		new_div.setAttribute("class", "spalte-buttonSizePair fontSize button size active")
-		this.pairs = new_pairs;
+		if (!(this.pairs + x < 5) && !(this.pairs + x > 25)) {
+			this.pairs += x;
+			let visDiv = document.getElementById("pairs");
+			visDiv.innerHTML = this.pairs;
+		}
+
 		this.createField();
 	}
 
